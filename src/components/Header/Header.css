@@ -1,0 +1,13 @@
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.logout-btn {
+    background-color: #EC4447;
+    color: white;
+    font-weight: 600;
+}
