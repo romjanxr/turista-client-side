@@ -1,9 +1,12 @@
 import React from 'react';
+import TopBanner from '../TopBanner/TopBanner';
+import TourPackage from '../TourPackage/TourPackage';
 
 const Home = () => {
     return (
         <div>
-            <h2>This is Home</h2>
+            <TopBanner />
+            <TourPackage />
         </div>
     );
 };

@@ -13,6 +13,9 @@ const Login = () => {
             .then(() => {
                 history.push(redirect_uri)
             })
+            .catch(error => {
+                console.log(error.message);
+            })
             .finally(() => setIsLoading(false));
     }
 

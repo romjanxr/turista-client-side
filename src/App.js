@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
 import Header from './components/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
@@ -8,6 +7,8 @@ import './App.css';
 import Login from './components/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Home from './components/Home/Home/Home';
+import AddTourPackage from './components/AddTourPackage/AddTourPackage';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <PrivateRoute path="/dashboard">
             <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/add-package">
+            <AddTourPackage />
           </PrivateRoute>
           <Route path="*">
             <NotFound />

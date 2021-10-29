@@ -35,9 +35,6 @@ const Header = () => {
                             <Nav.Link as={NavLink} to="/courses" className="text-white">
                                 Courses
                             </Nav.Link>
-                            <Nav.Link as={NavLink} to="/home#feature" className="text-white">
-                                Feature Courses
-                            </Nav.Link>
 
                             {!displayName ? (
                                 <>
@@ -49,6 +46,14 @@ const Header = () => {
                                 <>
                                     <Nav.Link
                                         as={NavLink}
+                                        to="/add-package"
+                                        className="text-white"
+                                    >
+                                        Add Tour Package
+                                    </Nav.Link>
+
+                                    <Nav.Link
+                                        as={NavLink}
                                         to="/dashboard"
                                         className="text-white"
                                     >
@@ -57,6 +62,7 @@ const Header = () => {
 
                                     <NavDropdown
                                         menuVariant='dark'
+                                        align="end"
                                         title={
                                             <img
                                                 style={{
@@ -68,7 +74,7 @@ const Header = () => {
                                             />
                                         }
                                     >
-                                        <div className="text-center p-2">
+                                        <div className="text-center py-4 px-3">
                                             <h6>{displayName}</h6>
                                             <p className="my-2">{email}</p>
                                             <button onClick={logOut} className="btn-regular">

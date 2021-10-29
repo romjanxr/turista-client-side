@@ -1,0 +1,33 @@
+.package-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.package-price {
+    font-weight: 600;
+    font-size: 18px;
+    color: #f05942;
+    margin-bottom: 5px;
+}
+
+.icon {
+    color: #fec42d;
+}
+
+.icon-clock {
+    color: #f05942;
+}
+
+.time-period {
+    font-weight: 600;
+}
+
+.btn-booking{
+    background: linear-gradient(to right, #f05942, #ed4f42, #ed4745, #eb4149,#ea3248);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+    border: none;
+    transition: 0.4s;
+}
