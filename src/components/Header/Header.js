@@ -1,8 +1,10 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../images/logo.png'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import './Header.css'
 
 const Header = () => {
@@ -11,12 +13,12 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar style={{ backgroundColor: '#262626' }} expand="lg">
+            <Navbar style={{ backgroundColor: '#343A40' }} expand="lg">
                 <Container>
                     <Navbar.Brand as={NavLink} className="text-white" to="/home">
-                        <img width="110px" src={logo} alt="Logo" />
+                        <img width="100px" src={logo} alt="Logo" />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Toggle aria-controls="basic-navbar-nav"><FontAwesomeIcon className="text-white" icon={faBars} /></Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto align-items-center">
                             <Nav.Link as={NavLink} to="/home" className="text-white">
@@ -68,8 +70,8 @@ const Header = () => {
                                     >
                                         <div className="text-center p-2">
                                             <h6>{displayName}</h6>
-                                            <p className="m-0 mb-2">{email}</p>
-                                            <button onClick={logOut} className="btn logout-btn">
+                                            <p className="my-2">{email}</p>
+                                            <button onClick={logOut} className="btn-regular">
                                                 Sign Out
                                             </button>
                                         </div>

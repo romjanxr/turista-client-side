@@ -6,21 +6,24 @@ initializeAuthentication();
 
 const useFirebase = () => {
     const [user, setUser] = useState({})
+    const [isLoading, setIsLoading] = useState(true);
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
     const signInUsingGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(() => { })
+        setIsLoading(true);
+        return signInWithPopup(auth, googleProvider)
     }
 
     const logOut = () => {
+        setIsLoading(true)
         signOut(auth)
-            .then(() => { })
+            .then(() => { }).finally(() => setIsLoading(false));
     }
 
     useEffect(() => {
+        setIsLoading(true);
         const unsubscribe = onAuthStateChanged(auth, user => {
             if (user) {
                 setUser(user);
@@ -28,12 +31,15 @@ const useFirebase = () => {
             else {
                 setUser({});
             }
+            setIsLoading(false);
         })
         return unsubscribe;
     }, [])
 
     return {
         user,
+        isLoading,
+        setIsLoading,
         signInUsingGoogle,
         logOut
     }

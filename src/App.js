@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Login from './components/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -23,9 +24,9 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashboard />
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <NotFound />
           </Route>
