@@ -7,8 +7,9 @@ import './App.css';
 import Login from './components/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Home from './components/Home/Home/Home';
 import AddTourPackage from './components/AddTourPackage/AddTourPackage';
+import TourPackage from './components/TourPackage/TourPackage';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/tour-packages">
+            <TourPackage />
           </Route>
           <PrivateRoute path="/dashboard">
             <Dashboard />
