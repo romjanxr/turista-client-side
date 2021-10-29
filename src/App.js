@@ -10,6 +10,8 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddTourPackage from './components/AddTourPackage/AddTourPackage';
 import TourPackage from './components/TourPackage/TourPackage';
 import Home from './components/Home/Home';
+import Booking from './components/Booking/Booking';
+import MyOrders from './components/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -26,9 +28,15 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/tour-packages">
+          <Route exact path="/tour-packages">
             <TourPackage />
           </Route>
+          <PrivateRoute path="/tour-packages/:id">
+            <Booking />
+          </PrivateRoute>
+          <PrivateRoute path="/my-orders">
+            <MyOrders />
+          </PrivateRoute>
           <PrivateRoute path="/dashboard">
             <Dashboard />
           </PrivateRoute>

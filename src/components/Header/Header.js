@@ -32,9 +32,6 @@ const Header = () => {
                             <Nav.Link as={NavLink} to="/contact" className="text-white">
                                 Contact
                             </Nav.Link>
-                            <Nav.Link as={NavLink} to="/tour-packages" className="text-white">
-                                Our Packages
-                            </Nav.Link>
 
                             {!displayName ? (
                                 <>

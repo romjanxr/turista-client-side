@@ -4,9 +4,11 @@ import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import './SinglePackage.css'
 import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { useHistory } from 'react-router';
 
 const SinglePackage = ({ pkg }) => {
-    const { name, description, img, price } = pkg;
+    const history = useHistory();
+    const { name, description, img, price, _id } = pkg;
     return (
         <Col>
             <Card>
@@ -29,7 +31,7 @@ const SinglePackage = ({ pkg }) => {
                     <Card.Text>
                         {description.slice(0, 100)}
                     </Card.Text>
-                    <button className="btn-booking">Book Now</button>
+                    <button onClick={() => history.push(`/tour-packages/${_id}`)} className="btn-booking">Book Now</button>
                 </Card.Body>
             </Card>
         </Col>
