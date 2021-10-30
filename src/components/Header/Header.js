@@ -29,7 +29,7 @@ const Header = () => {
             <Navbar className={navbar ? 'navbar active' : 'navbar'} expand="lg" fixed="top">
                 <Container>
                     <Navbar.Brand as={NavLink} className="text-white" to="/home">
-                        <img width="100px" src={logo} alt="Logo" />
+                        <img width="120px" src={logo} alt="Logo" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"><FontAwesomeIcon className="text-white" icon={faBars} /></Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">

@@ -21,12 +21,15 @@ const MyOrders = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [status]);
 
+    console.log(status);
+
     // handle Approve button
     const handleUpdate = id => {
         axios.put(`https://turista-server.herokuapp.com/myorders/${id}`, { status: 'Approved' })
             .then(res => {
+                console.log(res);
                 if (res.data.modifiedCount > 0) {
-                    setStatus('Approved')
+                    setStatus(res.request.responseURL)
                 }
             })
     }

@@ -12,6 +12,7 @@ import Home from './components/Home/Home';
 import Booking from './components/Booking/Booking';
 import MyOrders from './components/MyOrders/MyOrders';
 import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </AuthProvider>
   );

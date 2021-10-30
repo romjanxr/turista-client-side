@@ -8,7 +8,7 @@ import './TourPackage.css'
 
 const TourPackage = () => {
     const [packages, setPackages] = useState([]);
-    const [Loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         setLoading(true);
@@ -19,7 +19,9 @@ const TourPackage = () => {
             })
     }, []);
 
-
+    if (loading) {
+        return <div className="text-center mt-5"><Spinner animation="border" variant="danger" /></div>
+    }
 
     return (
         <div className="container py-3 my-5 w-80" id="tour-package">
@@ -28,9 +30,6 @@ const TourPackage = () => {
                 <h2>The Best Of Our All <br />
                     Tour Packages</h2>
             </div>
-            {
-                Loading && <div className="text-center mt-5"><Spinner animation="border" variant="danger" /></div>
-            }
             <div>
                 <Row xs={1} md={3} className="g-4">
                     {

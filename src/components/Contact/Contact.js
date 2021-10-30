@@ -37,19 +37,19 @@ const Contact = () => {
                     </Form>
                 </div>
                 <div className="col-md-5 col-12">
-                    <div class="d-flex align-items-center mt-3 mb-2">
+                    <div className="d-flex align-items-center mt-3 mb-2">
                         <div className="contact-icon">
                             <FontAwesomeIcon icon={faMapMarkerAlt} />
                         </div>
-                        <p className="contact-info">2369 Robinson Lane Jackson<br /> OH 45640</p>
+                        <p className="contact-info">7/A Dhanmondi Road 7<br /> Dhaka 1205</p>
                     </div>
-                    <div class="d-flex align-items-center mb-2">
+                    <div className="d-flex align-items-center mb-2">
                         <div className="contact-icon">
                             <FontAwesomeIcon icon={faHeadset} />
                         </div>
                         <p className="contact-info">(+1) 740-395-3829<br />(+1) 740-982-9821</p>
                     </div>
-                    <div class="d-flex align-items-center mb-2">
+                    <div className="d-flex align-items-center mb-2">
                         <div className="contact-icon">
                             <FontAwesomeIcon icon={faAt} />
                         </div>

@@ -20,7 +20,7 @@ const ManageAllOrders = () => {
         axios.put(`https://turista-server.herokuapp.com/myorders/${id}`, { status: 'Approved' })
             .then(res => {
                 if (res.data.modifiedCount > 0) {
-                    setStatus('Approved')
+                    setStatus(res.request.responseURL);
                 }
             })
     }
