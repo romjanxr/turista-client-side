@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import google from '../../images/google.svg'
 
 const Login = () => {
     const { signInUsingGoogle, setIsLoading } = useAuth();
@@ -20,9 +21,13 @@ const Login = () => {
     }
 
     return (
-        <div className="mt-5 text-center">
-            <h2 className="mb-3">Please Login</h2>
-            <button className="btn-regular" onClick={handleGoogleSignIn}>Sign In Using Google</button>
+        <div>
+            <div className="tour-details-section">
+                <h2 className="tour-details-title">Please Login</h2>
+            </div>
+            <div className="mt-5 text-center">
+                <button className="btn-regular" onClick={handleGoogleSignIn}><img width="32px" src={google} alt="" />  Sign In Using Google</button>
+            </div>
         </div>
     );
 };

@@ -54,7 +54,7 @@ const Booking = () => {
             <div className="tour-details-section">
                 <h2 className="tour-details-title">Tour Details</h2>
             </div>
-            <div className="row my-5 w-75 mx-auto g-5">
+            <div className="row my-5 w-80 mx-auto g-5">
                 <div className="col-md-8 col-12">
                     <div className="mb-3">
                         <span className="time-period icon-clock"><FontAwesomeIcon

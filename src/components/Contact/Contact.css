@@ -1,0 +1,68 @@
+.contact .form-control{
+	padding: 10px 15px;
+	border-radius: 0px;
+	background-color: #f1f6f9;
+	border-color: #f1f6f9;
+	margin-bottom: 15px;
+}
+.contact .form-control:focus {
+	border-color:  #f05942;
+	box-shadow: none;
+	outline: 0 none;
+}
+.contact textarea {
+	background: #fff none repeat scroll 0 0;
+	border-radius: 0px;
+	box-shadow: none;
+	padding: 10px;
+	height: 100px;
+}
+.contact textarea:focus {
+	box-shadow: none;
+	outline: 0 none;
+}
+
+.btn-contact-bg {
+	background: linear-gradient(to right, #f05942, #ed4f42, #ed4745, #eb4149,#ea3248);
+	border: 1px solid #f05942 !important;
+	color: #fff !important;
+	padding: 12px 27px !important;
+	text-transform: capitalize;
+	transition: all 0.2s ease 0s;
+	border-radius: 4px;
+	text-align: center;
+	cursor: pointer;
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+}
+.btn-contact-bg:hover,
+.btn-contact-bg:focus {
+    background: linear-gradient(to right, #f05942, #ed4f42, #ed4745, #eb4149,#ea3248);
+    border: 1px solid #ed4f42!important;
+    color: #fff;
+}
+
+.contact-icon{
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	background: linear-gradient(to right, #f05942, #ed4f42, #ed4745, #eb4149,#ea3248);
+	color: #fff;
+	border-radius: 50%;
+	margin-bottom: 18px;
+	text-align: center;
+	margin-right: 24px;
+	margin-top: 5px;
+}
+
+.connect-icon {
+    font-size: 16px;
+}
+
+.contact-info{
+    color: #727272;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+}

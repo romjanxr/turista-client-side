@@ -1,19 +1,32 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../images/logo.png'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import './Header.css'
+import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
     const { user, logOut } = useAuth();
+    const [navbar, setNavbar] = useState(false);
     const { displayName, photoURL, email } = user;
+
+    const changeBackground = () => {
+        if (window.scrollY > 80) {
+            setNavbar(true)
+        }
+        else {
+            setNavbar(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeBackground);
 
     return (
         <div>
-            <Navbar style={{ backgroundColor: '#343A40' }} expand="lg">
+            <Navbar className={navbar ? 'navbar active' : 'navbar'} expand="lg" fixed="top">
                 <Container>
                     <Navbar.Brand as={NavLink} className="text-white" to="/home">
                         <img width="100px" src={logo} alt="Logo" />
@@ -24,15 +37,15 @@ const Header = () => {
                             <Nav.Link as={NavLink} to="/home" className="text-white">
                                 Home
                             </Nav.Link>
-                            <Nav.Link as={NavLink} to="/tour-packages" className="text-white">
+                            <Nav.Link as={HashLink} to="/#tour-package" className="text-white">
                                 Our Packages
                             </Nav.Link>
 
-                            <Nav.Link as={NavLink} to="/about" className="text-white">
+                            <Nav.Link as={HashLink} to="/#about" className="text-white">
                                 About
                             </Nav.Link>
 
-                            <Nav.Link as={NavLink} to="/contact" className="text-white">
+                            <Nav.Link as={HashLink} to="/#contact" className="text-white">
                                 Contact
                             </Nav.Link>
 

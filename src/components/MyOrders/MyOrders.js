@@ -46,33 +46,38 @@ const MyOrders = () => {
     }
 
     return (
-        <div className="w-75 mx-auto my-5">
-            <Table striped bordered hover size="sm" responsive>
-                <thead>
-                    <tr>
-                        <th>Ordered By</th>
-                        <th>Package Name</th>
-                        <th>Price</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        bookings.map(order => <tr key={order._id}>
-                            <td>{order.name}</td>
-                            <td>Special {order.booking.name} Tour</td>
-                            <td>${order.booking.price}</td>
-                            <td>{order.status}</td>
-                            <td>
-                                <Button onClick={() => handleUpdate(order._id)} className="me-2" size="sm" variant="success"><FontAwesomeIcon icon={faCheckSquare} /></Button>
-                                <Button onClick={() => handleDelete(order._id)} size="sm" variant="danger"><FontAwesomeIcon icon={faTrashAlt} /></Button>
-                            </td>
+        <div>
+            <div className="tour-details-section">
+                <h2 className="tour-details-title">My Orders</h2>
+            </div>
+            <div className="w-75 mx-auto my-5">
+                <Table striped bordered hover size="sm" responsive>
+                    <thead>
+                        <tr>
+                            <th>Ordered By</th>
+                            <th>Package Name</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Action</th>
                         </tr>
-                        )
-                    }
-                </tbody>
-            </Table>
+                    </thead>
+                    <tbody>
+                        {
+                            bookings.map(order => <tr key={order._id}>
+                                <td>{order.name}</td>
+                                <td>Special {order.booking.name} Tour</td>
+                                <td>${order.booking.price}</td>
+                                <td>{order.status}</td>
+                                <td>
+                                    <Button onClick={() => handleUpdate(order._id)} className="me-2" size="sm" variant="success"><FontAwesomeIcon icon={faCheckSquare} /></Button>
+                                    <Button onClick={() => handleDelete(order._id)} size="sm" variant="danger"><FontAwesomeIcon icon={faTrashAlt} /></Button>
+                                </td>
+                            </tr>
+                            )
+                        }
+                    </tbody>
+                </Table>
+            </div>
         </div>
     );
 };

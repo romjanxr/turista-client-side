@@ -2,7 +2,7 @@
     background: url(../../images/tourdetails.jpg) rgba(0, 0, 0, 0.5);
     background-size: cover;
     background-position: center;
-    height: 360px;
+    height: 320px;
     background-blend-mode: multiply;
     display: flex;
     align-items: center;

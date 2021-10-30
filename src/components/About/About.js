@@ -6,10 +6,10 @@ import './About.css'
 
 const About = () => {
     return (
-        <div className="w-80 mx-auto my-5">
+        <div className="w-80 mx-auto my-5" id="about">
             <div className="text-center section-title mb-5">
                 <span>Why Choose Us?</span>
-                <h2>Every Time We Provide
+                <h2>Every Time We Provide <br />
                     Best Service</h2>
             </div>
             <div className="row g-5">
