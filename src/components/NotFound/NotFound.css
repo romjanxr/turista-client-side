@@ -1,0 +1,17 @@
+.error-title {
+    font-size: 133px;
+    font-weight: bolder;
+    color: rgb(236, 68, 71);
+}
+
+.error-description {
+    font-size: 25px;
+    color: rgb(209, 68, 70);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.text-para {
+    color: #686a6f;
+    font-size: 16px;
+}
