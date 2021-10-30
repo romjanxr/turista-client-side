@@ -21,7 +21,7 @@ const Booking = () => {
         data.booking = tourPackage;
         data.status = 'Pending';
 
-        axios.post('http://localhost:5000/bookings', data)
+        axios.post('https://turista-server.herokuapp.com/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
                     handleShow();
@@ -31,7 +31,7 @@ const Booking = () => {
     };
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/packages/${id}`)
+        axios.get(`https://turista-server.herokuapp.com/packages/${id}`)
             .then(res => setTourPackage(res.data));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import './AddTourPackage.css'
 const axios = require('axios').default;
 
 const AddTourPackage = () => {
@@ -10,7 +11,7 @@ const AddTourPackage = () => {
     const handleClose = () => setShow(false);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/packages', data)
+        axios.post('https://turista-server.herokuapp.com/packages', data)
             .then(res => {
                 if (res.data.insertedId) {
                     handleShow();
@@ -20,7 +21,7 @@ const AddTourPackage = () => {
     }
 
     return (
-        <div className="container w-50 my-5">
+        <div className="my-5">
             <>
                 <Modal show={show} onHide={handleClose} animation={false}>
                     <Modal.Header closeButton>
@@ -34,7 +35,7 @@ const AddTourPackage = () => {
                     </Modal.Footer>
                 </Modal>
             </>
-            <div className="book-now w-50 mx-auto">
+            <div className="book-now width-container mx-auto">
                 <h4 className="text-center">Add A New Package</h4>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" {...register("name", { required: true, maxLength: 20 })} placeholder="Package Name" />

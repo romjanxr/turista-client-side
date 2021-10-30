@@ -5,7 +5,6 @@ import AuthProvider from './contexts/AuthProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Login from './components/Login/Login';
-import Dashboard from './components/Dashboard/Dashboard';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddTourPackage from './components/AddTourPackage/AddTourPackage';
 import TourPackage from './components/TourPackage/TourPackage';
@@ -40,9 +39,6 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/manage-all-orders">
             <ManageAllOrders />
-          </PrivateRoute>
-          <PrivateRoute path="/dashboard">
-            <Dashboard />
           </PrivateRoute>
           <PrivateRoute path="/add-package">
             <AddTourPackage />

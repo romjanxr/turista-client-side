@@ -1,0 +1,9 @@
+.width-container {
+    width: 50%;
+}
+
+@media only screen and (max-width: 576px){
+    .width-container{
+        width: 80%;
+    }
+}

@@ -12,7 +12,7 @@ const SingleOrders = ({ orders, setOrders, order }) => {
     console.log(orders)
 
     const handleUpdate = id => {
-        axios.put(`http://localhost:5000/myorders/${id}`, { status: 'Approved' })
+        axios.put(`https://turista-server.herokuapp.com/myorders/${id}`, { status: 'Approved' })
             .then(res => {
                 if (res.data.modifiedCount > 0) {
                     alert('data updated')
@@ -22,7 +22,7 @@ const SingleOrders = ({ orders, setOrders, order }) => {
     }
 
     const handleDelete = id => {
-        axios.delete(`http://localhost:5000/myorders/${id}`)
+        axios.delete(`https://turista-server.herokuapp.com/myorders/${id}`)
             .then(res => {
                 if (res.data.deletedCount > 0) {
                     const remainingUsers = bookings.filter(booking => booking._id !== id);

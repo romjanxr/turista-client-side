@@ -1,0 +1,12 @@
+.about-icon {
+    background: transparent;
+    border: 1px solid #f05942;
+    border-radius: 4px;
+    color: #f05942;
+    font-size: 29px;
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+    text-align: center;
+    display: inline-block;
+}
