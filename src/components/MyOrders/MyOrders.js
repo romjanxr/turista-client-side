@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import useAuth from '../../hooks/useAuth';
 
 const MyOrders = () => {
@@ -21,13 +22,10 @@ const MyOrders = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [status]);
 
-    console.log(status);
-
     // handle Approve button
     const handleUpdate = id => {
         axios.put(`https://turista-server.herokuapp.com/myorders/${id}`, { status: 'Approved' })
             .then(res => {
-                console.log(res);
                 if (res.data.modifiedCount > 0) {
                     setStatus(res.request.responseURL)
                 }
@@ -50,6 +48,10 @@ const MyOrders = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Turista | My Orders</title>
+            </Helmet>
+
             <div className="tour-details-section">
                 <h2 className="tour-details-title">My Orders</h2>
             </div>

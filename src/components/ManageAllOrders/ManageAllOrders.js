@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 
 const ManageAllOrders = () => {
     const [bookings, setBookings] = useState([]);
@@ -41,6 +42,9 @@ const ManageAllOrders = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Turista | Manage All Orders</title>
+            </Helmet>
             <div className="tour-details-section">
                 <h2 className="tour-details-title">Manage All Orders</h2>
             </div>
