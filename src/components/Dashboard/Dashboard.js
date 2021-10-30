@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Nav, Row, Tab } from 'react-bootstrap';
 import AddTourPackage from '../AddTourPackage/AddTourPackage';
+import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 import MyOrders from '../MyOrders/MyOrders';
 
 const Dashboard = () => {
@@ -14,7 +15,7 @@ const Dashboard = () => {
                                 <Nav.Link eventKey="myOrders">My Orders</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                <Nav.Link eventKey="second">Manage All Orders</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link eventKey="addPackage">Add Tour Package</Nav.Link>
@@ -27,7 +28,7 @@ const Dashboard = () => {
                                 <MyOrders />
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
-
+                                <ManageAllOrders />
                             </Tab.Pane>
                             <Tab.Pane eventKey="addPackage">
                                 <AddTourPackage />

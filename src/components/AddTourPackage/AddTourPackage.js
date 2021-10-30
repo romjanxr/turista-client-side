@@ -20,7 +20,7 @@ const AddTourPackage = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container w-50 my-5">
             <>
                 <Modal show={show} onHide={handleClose} animation={false}>
                     <Modal.Header closeButton>

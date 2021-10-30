@@ -18,7 +18,6 @@ const Booking = () => {
     const { user } = useAuth();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data);
         data.booking = tourPackage;
         data.status = 'Pending';
 

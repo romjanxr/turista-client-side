@@ -14,7 +14,7 @@ const TourPackage = () => {
     }, []);
 
     return (
-        <div className="container py-3 my-5 w-80">
+        <div className="container py-3 my-5 w-80" id="tour-package">
             <div className="text-center section-title mb-5">
                 <span>Popular Tour Package</span>
                 <h2>The Best Of Our All <br />

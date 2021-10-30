@@ -6,7 +6,7 @@ const Login = () => {
     const { signInUsingGoogle, setIsLoading } = useAuth();
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri = location.state?.from || '/dashboard';
+    const redirect_uri = location.state?.from || '/';
 
     const handleGoogleSignIn = () => {
         signInUsingGoogle()

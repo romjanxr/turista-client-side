@@ -12,6 +12,7 @@ import TourPackage from './components/TourPackage/TourPackage';
 import Home from './components/Home/Home';
 import Booking from './components/Booking/Booking';
 import MyOrders from './components/MyOrders/MyOrders';
+import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/my-orders">
             <MyOrders />
+          </PrivateRoute>
+          <PrivateRoute path="/manage-all-orders">
+            <ManageAllOrders />
           </PrivateRoute>
           <PrivateRoute path="/dashboard">
             <Dashboard />

@@ -24,6 +24,9 @@ const Header = () => {
                             <Nav.Link as={NavLink} to="/home" className="text-white">
                                 Home
                             </Nav.Link>
+                            <Nav.Link as={NavLink} to="/tour-packages" className="text-white">
+                                Our Packages
+                            </Nav.Link>
 
                             <Nav.Link as={NavLink} to="/about" className="text-white">
                                 About
@@ -41,21 +44,34 @@ const Header = () => {
                                 </>
                             ) : (
                                 <>
-                                    <Nav.Link
-                                        as={NavLink}
-                                        to="/add-package"
-                                        className="text-white"
+                                    <NavDropdown
+                                        menuVariant='dark'
+                                        align="end"
+                                        title={
+                                            <span className="text-white">Dashboard</span>
+                                        }
                                     >
-                                        Add Tour Package
-                                    </Nav.Link>
-
-                                    <Nav.Link
-                                        as={NavLink}
-                                        to="/dashboard"
-                                        className="text-white"
-                                    >
-                                        Dashboard
-                                    </Nav.Link>
+                                        <NavDropdown.Item
+                                            as={NavLink}
+                                            to="/my-orders"
+                                        >
+                                            My Orders
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item
+                                            as={NavLink}
+                                            to="/manage-all-orders"
+                                        >
+                                            Manage All Orders
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item
+                                            as={NavLink}
+                                            to="/add-package"
+                                        >
+                                            Add Tour Package
+                                        </NavDropdown.Item>
+                                    </NavDropdown>
 
                                     <NavDropdown
                                         menuVariant='dark'

@@ -4,21 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
-import useAuth from '../../hooks/useAuth';
 
-const MyOrders = () => {
+const ManageAllOrders = () => {
     const [bookings, setBookings] = useState([]);
     const [status, setStatus] = useState('');
-    const { user } = useAuth();
 
-    // Load user Orders
+    // Load all orders data
     useEffect(() => {
-        const email = user.email;
-        axios.get(`http://localhost:5000/myorders?email=${email}`)
-            .then(res => {
-                setBookings(res.data);
-            });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        axios.get('http://localhost:5000/myorders')
+            .then(res => setBookings(res.data))
     }, [status]);
 
     // handle Approve button
@@ -77,4 +71,4 @@ const MyOrders = () => {
     );
 };
 
-export default MyOrders;
+export default ManageAllOrders;
