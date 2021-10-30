@@ -31,6 +31,10 @@ const Booking = () => {
     };
 
     useEffect(() => {
+        document.title = "Turista | Bookings"
+    }, [])
+
+    useEffect(() => {
         axios.get(`https://turista-server.herokuapp.com/packages/${id}`)
             .then(res => setTourPackage(res.data));
         // eslint-disable-next-line react-hooks/exhaustive-deps

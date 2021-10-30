@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
-import { Helmet } from 'react-helmet';
 import google from '../../images/google.svg'
 
 const Login = () => {
@@ -9,6 +8,10 @@ const Login = () => {
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/';
+
+    useEffect(() => {
+        document.title = "Turista | Login"
+    }, [])
 
     const handleGoogleSignIn = () => {
         signInUsingGoogle()
@@ -23,9 +26,6 @@ const Login = () => {
 
     return (
         <div>
-            <Helmet>
-                <title>Turista | Login</title>
-            </Helmet>
             <div className="tour-details-section">
                 <h2 className="tour-details-title">Please Login</h2>
             </div>

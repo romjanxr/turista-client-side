@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
 import { useForm } from "react-hook-form";
 import './AddTourPackage.css'
 const axios = require('axios').default;
@@ -21,11 +20,12 @@ const AddTourPackage = () => {
             })
     }
 
+    useEffect(() => {
+        document.title = "Turista | Add Tour Package"
+    }, [])
+
     return (
         <div>
-            <Helmet>
-                <title>Turista | Add Tour Package</title>
-            </Helmet>
             <div className="tour-details-section">
                 <h2 className="tour-details-title">Add Tour Package</h2>
             </div>

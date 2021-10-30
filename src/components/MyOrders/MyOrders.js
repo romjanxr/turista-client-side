@@ -4,13 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
 import useAuth from '../../hooks/useAuth';
 
 const MyOrders = () => {
     const [bookings, setBookings] = useState([]);
     const [status, setStatus] = useState('');
     const { user } = useAuth();
+
+    useEffect(() => {
+        document.title = "Turista | My Orders"
+    }, [])
 
     // Load user Orders
     useEffect(() => {
@@ -48,10 +51,6 @@ const MyOrders = () => {
 
     return (
         <div>
-            <Helmet>
-                <title>Turista | My Orders</title>
-            </Helmet>
-
             <div className="tour-details-section">
                 <h2 className="tour-details-title">My Orders</h2>
             </div>
