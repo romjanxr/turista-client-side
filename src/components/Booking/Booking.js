@@ -68,6 +68,7 @@ const Booking = () => {
                     <div className="mb-4">
                         <img className="img-fluid" src={tourPackage.img} alt="" />
                     </div>
+                    <h3 className="error-description">Price: ${tourPackage.price}</h3>
                     <p>{tourPackage.description}</p>
                 </div>
                 <div className="col-md-4 col-12">
